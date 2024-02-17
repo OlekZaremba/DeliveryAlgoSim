@@ -1,12 +1,13 @@
-package com.deliveryalgosim.deliveryalgosim.classes;
+package com.deliveryalgosim.deliveryalgosim.model;
 
 public class Order {
 
     private int grid;
     private String goodsOrdered;
 
-    public Order(int grid, String goodsOrdered) {
-        this.grid = grid;
+    public Order(String goodsOrdered) {
+        Grid grid1 = new Grid();
+        this.grid = grid1.randomGridId();
         this.goodsOrdered = goodsOrdered;
     }
 
@@ -26,5 +27,6 @@ public class Order {
     public void setGoodsOrdered(String goodsOrdered) {
         this.goodsOrdered = goodsOrdered;
     }
+
 
 }

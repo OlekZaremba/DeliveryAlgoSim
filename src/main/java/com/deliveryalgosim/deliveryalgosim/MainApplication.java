@@ -1,6 +1,6 @@
 package com.deliveryalgosim.deliveryalgosim;
 
-import com.deliveryalgosim.deliveryalgosim.classes.PromiseTime;
+import com.deliveryalgosim.deliveryalgosim.model.PromiseTime;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,7 +13,7 @@ public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 710,471 );
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();

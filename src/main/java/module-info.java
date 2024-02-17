@@ -5,4 +5,6 @@ module com.deliveryalgosim.deliveryalgosim {
 
     opens com.deliveryalgosim.deliveryalgosim to javafx.fxml;
     exports com.deliveryalgosim.deliveryalgosim;
+    exports com.deliveryalgosim.deliveryalgosim.controllers;
+    opens com.deliveryalgosim.deliveryalgosim.controllers to javafx.fxml;
 }

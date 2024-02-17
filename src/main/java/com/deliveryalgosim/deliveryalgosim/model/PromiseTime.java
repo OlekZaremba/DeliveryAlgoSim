@@ -1,4 +1,4 @@
-package com.deliveryalgosim.deliveryalgosim.classes;
+package com.deliveryalgosim.deliveryalgosim.model;
 
 
 import java.time.LocalDateTime;
@@ -18,8 +18,4 @@ public class PromiseTime {
         return format;
     }
 
-    public void promiseTimeAlgorithm(){
-
-
-    }
 }
