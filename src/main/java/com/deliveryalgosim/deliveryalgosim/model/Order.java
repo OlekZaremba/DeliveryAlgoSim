@@ -10,12 +10,6 @@ public class Order extends Grid {
     public Order() {
     }
 
-
-
-    public String getGoodsOrdered() {
-        return goodsOrdered;
-    }
-
     public void setGoodsOrdered(String goodsOrdered) {
         this.goodsOrdered = goodsOrdered;
     }
@@ -23,8 +17,8 @@ public class Order extends Grid {
     public String randomGoods () {
 
         String[] solids = {"Chicken Burger", "Cheeseburger", "Chicken nuggets", "Chicken wings", "Chicken tenders",
-                "Chicken thighs", "Chicken quesadilla"};
-        String[] drinks = {"Fries", "Cola", "Fanta", "Sprite", "Ice tea lemon", "Ice tea peach"};
+                "Chicken thighs", "Chicken quesadilla", "Fries"};
+        String[] drinks = {"Cola", "Fanta", "Sprite", "Ice tea lemon", "Ice tea peach"};
         Random random = new Random();
         StringBuilder solidsOrdered = new StringBuilder();
         int numberOfSolids = random.nextInt(1,5);

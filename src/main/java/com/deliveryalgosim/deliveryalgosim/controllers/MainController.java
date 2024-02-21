@@ -10,10 +10,8 @@ public class MainController {
 
     private List<Order> listOfOrders = new ArrayList<>();
 
-
     public MainController() {
     }
-
 
     public void addOrder(){
         Order order = new Order();
@@ -23,6 +21,9 @@ public class MainController {
     }
 
     public void showOrder() {
-        System.out.println(listOfOrders);
+        String showOrders = listOfOrders.toString();
+        String result = String.join(" ", showOrders);
+        System.out.println(result);
+
     }
 }

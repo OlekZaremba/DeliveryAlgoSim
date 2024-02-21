@@ -6,10 +6,6 @@ public class Grid {
 
     private int gridId;
 
-    public int getGridId() {
-        return gridId;
-    }
-
     public Grid() {
     }
 
