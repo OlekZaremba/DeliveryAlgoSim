@@ -1,23 +1,15 @@
 package com.deliveryalgosim.deliveryalgosim.model;
 
-public class Order {
+import java.util.Random;
 
-    private int grid;
+public class Order extends Grid {
+
     private String goodsOrdered;
 
-    public Order(String goodsOrdered) {
-        Grid grid1 = new Grid();
-        this.grid = grid1.randomGridId();
-        this.goodsOrdered = goodsOrdered;
+
+    public Order() {
     }
 
-    public int getGrid() {
-        return grid;
-    }
-
-    public void setGrid(int grid) {
-        this.grid = grid;
-    }
 
 
     public String getGoodsOrdered() {
@@ -26,6 +18,23 @@ public class Order {
 
     public void setGoodsOrdered(String goodsOrdered) {
         this.goodsOrdered = goodsOrdered;
+    }
+
+    public String randomGoods () {
+
+        String[] solids = {"Chicken Burger", "Cheeseburger","Chicken nuggets", "Chicken wings", "Chicken tenders",
+                "Chicken thighs", "Chicken quesadilla"};
+        String[] drinks = {"Fies", "Cola", "Fanta", "Sprite", "Ice tea lemon", "Ice tea peach"};
+        Random random = new Random();
+        StringBuilder solidsOrdered = new StringBuilder();
+        int numberOfSolids = random.nextInt(1,5);
+        for (int i = 1; i<=numberOfSolids; i++){
+            int solidsId = random.nextInt(1, 7);
+            solidsOrdered.append(solids[solidsId]);
+
+
+        }
+        return null;
     }
 
 
