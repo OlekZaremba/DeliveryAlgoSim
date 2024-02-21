@@ -1,14 +1,11 @@
 package com.deliveryalgosim.deliveryalgosim;
 
-import com.deliveryalgosim.deliveryalgosim.model.Order;
-import com.deliveryalgosim.deliveryalgosim.model.PromiseTime;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.time.LocalDateTime;
 
 public class MainApplication extends Application {
     @Override

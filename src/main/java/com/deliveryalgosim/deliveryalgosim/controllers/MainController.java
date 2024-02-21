@@ -1,7 +1,7 @@
 package com.deliveryalgosim.deliveryalgosim.controllers;
 
 import com.deliveryalgosim.deliveryalgosim.model.Order;
-
+import java.util.stream.Collectors;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,8 +21,9 @@ public class MainController {
     }
 
     public void showOrder() {
-        String showOrders = listOfOrders.toString();
-        String result = String.join(" ", showOrders);
+        String result = listOfOrders.stream()
+                .map(Object::toString)
+                .collect(Collectors.joining(""));
         System.out.println(result);
 
     }
