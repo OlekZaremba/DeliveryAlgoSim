@@ -22,18 +22,16 @@ public class Order extends Grid {
 
     public String randomGoods () {
 
-        String[] solids = {"Chicken Burger", "Cheeseburger","Chicken nuggets", "Chicken wings", "Chicken tenders",
+        String[] solids = {"Chicken Burger", "Cheeseburger", "Chicken nuggets", "Chicken wings", "Chicken tenders",
                 "Chicken thighs", "Chicken quesadilla"};
         String[] drinks = {"Fries", "Cola", "Fanta", "Sprite", "Ice tea lemon", "Ice tea peach"};
         Random random = new Random();
         StringBuilder solidsOrdered = new StringBuilder();
         int numberOfSolids = random.nextInt(1,5);
-        for (int i = 0; i<=numberOfSolids; i++){
+        for (int i = 0; i<=numberOfSolids; i++) {
             int solidsId = random.nextInt(solids.length);
             solidsOrdered.append(solids[solidsId]);
-            if (i < numberOfSolids - 1) {
-                solidsOrdered.append(", ");
-            }
+            solidsOrdered.append(", ");
         }
 
         StringBuilder drinksOrdered = new StringBuilder();
@@ -41,15 +39,16 @@ public class Order extends Grid {
         for (int i = 1; i<=numberOfDrinks; i++){
             int drinksId = random.nextInt(drinks.length);
             drinksOrdered.append(drinks[drinksId]);
-            if (i < numberOfDrinks - 1) {
-                drinksOrdered.append(", ");
-            }
+            drinksOrdered.append(" ");
         }
 
 
 
-        return solidsOrdered + " with " + drinksOrdered;
+        return solidsOrdered + "with " + drinksOrdered;
     }
 
-
+    @Override
+    public String toString() {
+        return "Order: " + goodsOrdered + "from " + super.toString() + "\n";
+    }
 }

@@ -3,10 +3,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.deliveryalgosim.deliveryalgosim.controllers.MainController">
    <children>
-      <Button layoutX="130.0" layoutY="76.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="128.0" text="Add order" />
-      <Button layoutX="445.0" layoutY="76.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="117.0" text="Show orders" />
+      <Button layoutX="130.0" layoutY="76.0" mnemonicParsing="false" onAction="#addOrder" prefHeight="76.0" prefWidth="128.0" text="Add order" />
+      <Button layoutX="445.0" layoutY="76.0" mnemonicParsing="false" onAction="#showOrder" prefHeight="76.0" prefWidth="117.0" text="Show orders" />
       <Button layoutX="249.0" layoutY="236.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="213.0" text="Show orders assigned to drivers" />
    </children>
 </AnchorPane>

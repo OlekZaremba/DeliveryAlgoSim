@@ -1,22 +1,28 @@
 package com.deliveryalgosim.deliveryalgosim.controllers;
 
 import com.deliveryalgosim.deliveryalgosim.model.Order;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainController {
 
-    @FXML
-    public Button b1;
+    private List<Order> listOfOrders = new ArrayList<>();
+
+
+    public MainController() {
+    }
 
 
     public void addOrder(){
         Order order = new Order();
-
         order.setGridId(order.randomGridId());
+        order.setGoodsOrdered(order.randomGoods());
+        listOfOrders.add(order);
+    }
 
-
-
+    public void showOrder() {
+        System.out.println(listOfOrders);
     }
 }
