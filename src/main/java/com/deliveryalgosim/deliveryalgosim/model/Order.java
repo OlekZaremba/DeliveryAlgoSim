@@ -5,7 +5,11 @@ import java.util.Random;
 public class Order extends Grid {
 
     private String goodsOrdered;
+    private boolean isPriority;
 
+    public boolean isPriority() {
+        return isPriority;
+    }
 
     public Order() {
     }
