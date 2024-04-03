@@ -1,14 +1,13 @@
 package com.deliveryalgosim.deliveryalgosim.controllers;
 
+import com.deliveryalgosim.deliveryalgosim.model.GlobalListForOrders;
 import com.deliveryalgosim.deliveryalgosim.model.Order;
 import java.util.stream.Collectors;
-import java.util.ArrayList;
-import java.util.List;
+
 
 
 public class MainController {
 
-    private List<Order> listOfOrders = new ArrayList<>();
 
     public MainController() {
     }
@@ -17,11 +16,11 @@ public class MainController {
         Order order = new Order();
         order.setGridId(order.randomGridId());
         order.setGoodsOrdered(order.randomGoods());
-        listOfOrders.add(order);
+        GlobalListForOrders.globalList.add(order);
     }
 
     public void showOrder() {
-        String result = listOfOrders.stream()
+        String result = GlobalListForOrders.globalList.stream()
                 .map(Object::toString)
                 .collect(Collectors.joining(""));
         System.out.println(result);

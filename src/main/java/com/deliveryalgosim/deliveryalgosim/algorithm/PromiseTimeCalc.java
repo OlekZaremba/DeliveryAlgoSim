@@ -1,42 +1,26 @@
 package com.deliveryalgosim.deliveryalgosim.algorithm;
 
-import com.deliveryalgosim.deliveryalgosim.model.Order;
-import java.util.List;
+
+import com.deliveryalgosim.deliveryalgosim.model.GlobalListForOrders;
 
 public class PromiseTimeCalc {
 
-    public int calculateAdditionalTime(List<Order> orders, double distance, boolean isBadWeather, boolean isPeakTime) {
+
+    public int calculateAdditionalTime() {
+        int orderCount = GlobalListForOrders.globalList.size();
         int additionalTime = 0;
 
-        if (orders.size() > 10) {
-            additionalTime += 30;
-        } else if (orders.size() > 5) {
-            additionalTime += 20;
-        } else if (orders.size() > 0) {
+        if (orderCount > 4) {
             additionalTime += 10;
-        }
-
-        if (distance > 10) {
-            additionalTime += 15;
-        } else if (distance > 5) {
-            additionalTime += 10;
-        }
-
-        if (isBadWeather) {
-            additionalTime += 20;
-        }
-
-        if (isPeakTime) {
-            additionalTime += 15;
-        }
-
-        for (Order order : orders) {
-            if (order.isPriority()) {
-                additionalTime -= 5;
-                break;
-            }
+        } else if (orderCount > 2) {
+            additionalTime += 5;
+        } else if (orderCount > 0) {
+            additionalTime -= 10;
+        } else if (orderCount == 0) {
+            additionalTime -= 15;
         }
 
         return additionalTime;
     }
+
 }
